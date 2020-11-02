@@ -62,6 +62,11 @@ export default ({
     const [qrCodes, setQrCodes] = useState(null);
     useEffect(() => {
         const promises = [];
+        window.ga('send', 'event', {
+            eventCategory: 'Create attestation',
+            eventAction: 'click',
+            eventLabel: people.length,
+        });
         people.forEach(peopleItem => promises.push(
             new Promise((resolve) => {
                 QRCode.toDataURL(generateQrCodeContent(peopleItem), { type: "png", errorCorrectionLevel: 'H' })

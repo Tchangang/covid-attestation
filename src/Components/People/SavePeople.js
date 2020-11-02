@@ -69,6 +69,10 @@ export default ({
             setError('Entrez votre code postal de résidence');
             return;
         }
+        window.ga('send', 'event', {
+            eventCategory: 'Create profile',
+            eventAction: 'click'
+        });
         onSave(data);
     }
     return (
