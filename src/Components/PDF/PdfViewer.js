@@ -62,7 +62,7 @@ export default ({
     const [qrCodes, setQrCodes] = useState(null);
     useEffect(() => {
         const promises = [];
-        window.ga('send', 'event', {
+        window.gtag('send', 'event', {
             eventCategory: 'Create attestation',
             eventAction: 'click',
             eventLabel: people.length,
