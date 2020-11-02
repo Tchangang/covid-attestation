@@ -36,3 +36,187 @@
     transform: rotate(360deg);
   }
 }
+button {
+  border-radius: 4px;
+}
+button.maj {
+  font-size: 10px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+button.black {
+  background: black;
+  color: white;
+  border: 1px solid black;
+}
+button.blackInv {
+  background: white;
+  color: black;
+  border: 1px solid black;
+}
+button.blue {
+  background: #4834d4;
+  color: white;
+  border: 1px solid #4834d4;
+}
+button.delete {
+  background: #ee5253;
+  color: white;
+  border: 1px solid #ee5253;
+  font-size: 13px;
+  padding: 4px 10px;
+}
+button.edit {
+  background: white;
+  color: black;
+  border: 1px solid black;
+  font-size: 13px;
+  padding: 4px 10px;
+}
+button.back {
+  background: white;
+  border: none;
+  padding-left: 0px;
+  text-decoration: underline;
+}
+button.next {
+  background: #4834d4;
+  color: white;
+  border: 1px solid #4834d4;
+}
+.error {
+  background: #ee5253;
+  border-radius: 4px;
+  color: white;
+  font-size: 13px;
+  padding: 10px 20px;
+}
+.peopleListContainer{
+  margin-top: 15px;
+}
+.peopleItemInList{
+  padding: 10px 20px;
+  box-sizing: border-box;
+  text-align: left;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+.peopleItemInList.checked {
+  background: #4834d4;
+  color: white;
+}
+.peopleItemInList .name {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.peopleItemInList .address {
+  font-size: 14px;
+}
+.peopleDetails {
+  padding: 10px 20px;
+  box-sizing: border-box;
+  text-align: left;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  margin-top: 15px;
+}
+.peopleDetailsLineContainer {
+  margin-bottom: 10px;
+}
+.peopleDetailsLine{
+  margin-top: 10px;
+}
+.peopleDetailsLabel{
+  font-size: 11px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+.peopleDetailsContent{
+  font-size: 14px;
+}
+.formContainer{
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 4px;
+}
+.formContainerTitle {
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: left;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.inputContainer{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.inputContainer label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: left;
+  margin-bottom: 3px;
+}
+.inputContainer input {
+  height: 36px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.horaireContainer select {
+  height: 36px;
+  width: 60px;
+  padding-left: 10px;
+  margin: 20px;
+}
+
+
+.newAttestationContainer{
+  margin-bottom: 80px;
+}
+.stepIndication {
+  text-align: left;
+  padding: 10px 20px;
+}
+.stepIndication span {
+  font-weight: bold;
+  font-size: 14px;
+  margin-right: 10px;
+}
+.stepIndication {
+  font-size: 14px;
+}
+.motifSelector{
+  padding: 20px;
+}
+
+.motifSelectorItem {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 14px;
+  text-align: left;
+  border-radius: 3px;
+}
+.motifSelectorItem.checked {
+  background: #4834d4;
+  color: white;
+}
+.download {
+  background: #4834d4;
+  color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  font-size: 16px;
+  padding: 20px 40px;
+  border-radius: 4px;
+}
