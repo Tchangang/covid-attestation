@@ -1,3 +1,12 @@
+# Générateur d'attestation Covid19
+Cette appli web permet de créer plusieurs profils et de générer automatiquement les attestations covid19.
+
+Tout est généré en front, aucun appel back.
+
+Les données sont stockées via le localStorage et les pdfs générés à la volée.
+
+Pour plus d'informations, lire le package.json pour la liste des lib utilisées. 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
