@@ -189,8 +189,8 @@ export default ({
                 </div>
                 <div style={{ fontSize: 13, marginTop: 20 }}>
                     <div>Ce générateur a été réalisé à partir du formulaire du gouvernement disponible <a href={"https://www.interieur.gouv.fr/Actualites/L-actu-du-Ministere/Attestations-de-deplacement"} target={"_blank"}>ici</a></div>
-                    <div>Réalisé à Bordeaux ♥️ par Boris ☺️</div>
-                    <div>Le code source est entièrement disponible ici</div>
+                    <div>Réalisé avec ♥️ par Boris & Daniel T.☺️</div>
+                    <div>Le code source est entièrement disponible <a href={"https://github.com/Tchangang/covid-attestation"} target="_blank">ici</a></div>
                 </div>
             </div>
         );
