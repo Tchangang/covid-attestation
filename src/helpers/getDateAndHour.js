@@ -4,7 +4,7 @@ export default () => {
     const date = new Date();
     const times = {
         day: `${date.getDate() < 10 ? '0' : ''}${date.getDate()}`,
-        month: `${date.getMonth() < 10 ? '0' : ''}${date.getMonth()}`,
+        month: `${date.getMonth() < 9 ? '0' : ''}${date.getMonth() + 1}`,
         year: date.getFullYear(),
         hour: `${date.getHours() < 10 ? '0' : ''}${date.getHours()}`,
         minute: `${date.getMinutes() < 10 ? '0' : ''}${date.getMinutes()}`,
