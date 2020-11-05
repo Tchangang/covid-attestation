@@ -5,6 +5,29 @@ Tout est généré en front, aucun appel back.
 
 Les données sont stockées via le localStorage et les pdfs générés à la volée.
 
+##Automatisation d'attestation
+
+Vous pouvez générer une attestation via l'url suivante:
+
+https://covid-attestation.vercel.app/?motif={motifValue}&firstname={firstnameValue}&lastname={lastnameValue}
+    
+<table>
+<tr>
+    <td>motifValue</td>
+    <td>travail, achats, sante, famille, handicap, sport_animaux, convocation, missions ou enfants</td>
+</tr>
+<tr>
+    <td>firstnameValue</td>
+    <td>Prénom d'un profil créé</td>
+</tr>
+<tr>
+    <td>lastnameValue</td>
+    <td>Nom d'un profil créé</td>
+</tr>
+</table>
+
+Les prénoms et noms ne sont pas sensibles à la casse.
+
 Pour plus d'informations, lire le package.json pour la liste des lib utilisées. 
 
 # Getting Started with Create React App
