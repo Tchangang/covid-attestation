@@ -69,9 +69,27 @@ const HourValue = ({
 export default ({
     people,
     onCancel,
+    preData,
 }) => {
     const [attestationData, setAttestationData] = useState({ people: [], peopleId: [], motif: null, hour: addZeropadding(new Date().getHours()), minute: addZeropadding(new Date().getMinutes()) });
     const [step, setStep] = useState('pickPeople');
+    useEffect(() => {
+        console.log('preData', preData);
+        const [found] = people.filter(peopleItem => peopleItem.firstname.toLowerCase()
+            === preData.firstname.toLowerCase()
+         && peopleItem.lastname.toLowerCase() === preData.lastname.toLowerCase());
+        if (found) {
+            setAttestationData({
+                ...attestationData,
+                people: [found],
+                peopleId: [found.id],
+                motif: preData.motif,
+            });
+            setTimeout(() => {
+                navigate.createPdf();
+            }, 400);
+        }
+    }, [preData]);
     const navigate = {
         pickPeople: () => setStep('pickPeople'),
         selectMotif: () => setStep('selectMotif'),

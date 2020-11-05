@@ -4,13 +4,16 @@ import SavePeople from "./People/SavePeople";
 import PeopleList from "./People/PeopleList";
 import NewAttestation from "./Attestation/NewAttestation";
 import docIconSvg from '../res/document_illus.svg';
+import motifs from "../const/motifs";
 
 export default () => {
     const fetchPeople = () => {
         const list = apis.listPeople();
         setPeople(list);
+        return list;
     }
     const [menu, setMenu] = useState({ nav: 'home', data: {} });
+    const [preData, setPreData] = useState(null);
     const navigate = {
         home: () => setMenu({ nav: 'home', data: {} }),
         newPeople: () => setMenu({ nav: 'newPeople', data: {} }),
@@ -20,7 +23,31 @@ export default () => {
     }
     const [people, setPeople] = useState([]);
     useEffect(() => {
-        fetchPeople();
+        const localList = fetchPeople()
+        const parsed = {};
+        const query = (window.location.search || '').substr(1).split('&').map(item => {
+            const [key, value] = item.split('=');
+            switch (key) {
+                case 'motif':
+                    parsed['motif'] = value;
+                    break;
+                case 'firstname':
+                    parsed['firstname'] = value;
+                    break;
+                case 'lastname':
+                    parsed['lastname'] = value;
+                    break;
+                default:
+                    break;
+            }
+        });
+        console.log('query', query);
+        console.log('parsed', parsed);
+        console.log('localList', localList);
+        if (parsed.motif && parsed.firstname && parsed.lastname && Object.keys(motifs).includes(parsed.motif)) {
+            setPreData(parsed);
+            navigate.newAttestation();
+        }
     }, [0]);
     const renderApp = () => {
         switch (menu.nav) {
@@ -107,6 +134,7 @@ export default () => {
                             alert('Cancel');
                         }}
                         people={people}
+                        preData={preData}
                     />
                 );
             default:
