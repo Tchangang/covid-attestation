@@ -75,19 +75,21 @@ export default ({
     const [step, setStep] = useState('pickPeople');
     useEffect(() => {
         console.log('preData', preData);
-        const [found] = people.filter(peopleItem => peopleItem.firstname.toLowerCase()
-            === preData.firstname.toLowerCase()
-         && peopleItem.lastname.toLowerCase() === preData.lastname.toLowerCase());
-        if (found) {
-            setAttestationData({
-                ...attestationData,
-                people: [found],
-                peopleId: [found.id],
-                motif: preData.motif,
-            });
-            setTimeout(() => {
-                navigate.createPdf();
-            }, 400);
+        if (preData && preData.firstname && preData.lastname) {
+            const [found] = people.filter(peopleItem => peopleItem.firstname.toLowerCase()
+                === preData.firstname.toLowerCase()
+                && peopleItem.lastname.toLowerCase() === preData.lastname.toLowerCase());
+            if (found) {
+                setAttestationData({
+                    ...attestationData,
+                    people: [found],
+                    peopleId: [found.id],
+                    motif: preData.motif,
+                });
+                setTimeout(() => {
+                    navigate.createPdf();
+                }, 400);
+            }
         }
     }, [preData]);
     const navigate = {
